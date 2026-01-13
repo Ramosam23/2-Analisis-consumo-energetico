@@ -1,0 +1,23 @@
+# Entornos
+__pycache__/
+.ipynb_checkpoints/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales
+.env
+.venv
+venv/
+
+# Datos grandes (opcional)
+data/raw/*.zip
+data/raw/*.7z
+
+# Power BI
+*.pbix
+
+# Modelos serializados
+*.pkl
+*.joblib
