@@ -21,3 +21,8 @@ data/raw/*.7z
 # Modelos serializados
 *.pkl
 *.joblib
+
+# Large datasets
+data/raw/*.csv
+data/processed/*.csv
+
