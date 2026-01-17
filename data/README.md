@@ -1,24 +1,48 @@
-# Data – Consumo Energético
+## Data – Consumo Energético
 
-Esta carpeta contiene los datos utilizados en el proyecto **Análisis de Consumo Energético**.  
-Los datos están organizados siguiendo buenas prácticas de análisis de datos, separando los archivos originales de los datos procesados utilizados para el modelado.
+Esta carpeta contiene los datos utilizados en el proyecto Análisis y Predicción del Consumo Energético.
+La organización de los datos sigue buenas prácticas de ciencia de datos, separando claramente los datos originales de los datos procesados utilizados en el análisis y el modelado.
 
-## Estructura
+### Estructura de la carpeta
+raw/
 
-- **raw/**
-  - Contiene los datos originales, sin ningún tipo de modificación.
-  - Estos archivos se utilizan únicamente como fuente de entrada.
+Contiene los datos originales, sin ningún tipo de modificación / no versionado debido a tamaño del archivo.
+Estos archivos se utilizan exclusivamente como fuente de entrada.
+No deben ser alterados manualmente.
 
-- **processed/**
-  - Contiene los datos limpios y transformados.
-  - Incluye agregaciones temporales y variables derivadas utilizadas para el análisis y el modelado.
+processed/
+Contiene los datos limpios y transformados / no versionado debido al tamaño del archivo
 
-- **external/**
-- Esta carpeta está reservada para fuentes de datos externas o complementarias (por ejemplo, datos climáticos, calendarios, información geográfica).
+Incluye:
+- Conversión y estandarización de la variable temporal.
+- Tratamiento de valores faltantes.
+- Verificación y eliminación de valores inválidos.
+- Estos datos son los utilizados directamente en el análisis exploratorio y en los modelos predictivos.
 
-- En este proyecto no se utilizaron fuentes externas adicionales, por lo que la carpeta se mantiene vacía de forma intencional.
+external/
 
-## Nota importante
+Carpeta reservada para fuentes de datos externas o complementarias
+(por ejemplo, datos climáticos, calendarios o información contextual).
 
-Los datos en la carpeta `raw/` no deben ser modificados.  
-Cualquier transformación, limpieza o ingeniería de variables se guarda en `processed/` para asegurar trazabilidad y reproducibilidad del análisis.
+En este proyecto no se incorporaron fuentes externas adicionales, por lo que la carpeta se mantiene vacía de forma intencional.
+
+### Fuente del dataset
+
+El dataset original utilizado en este proyecto corresponde a:
+
+**Individual household electric power consumption Data Set**  
+Fuente: UCI Machine Learning Repository  
+https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption
+
+### Nota importante
+
+Los datasets originales y procesados no se incluyen en el repositorio debido a las limitaciones de tamaño de GitHub.
+
+Para reproducir el análisis:
+
+- Descargar el dataset desde la fuente original.
+
+- Colocarlo en la carpeta data/raw/.
+
+- Ejecutar el notebook de exploración y preparación de datos para generar el dataset procesado.
+
